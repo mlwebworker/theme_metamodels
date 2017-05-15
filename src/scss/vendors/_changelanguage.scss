@@ -1,0 +1,91 @@
+/*
+=========================================================
+Stylesheet MM-Website
+VENDORS/CHANGELANGUAGE
+Ist auch eine Navigation Element nav
+Extension bringt kein eigenes CSS mit!!!
+=========================================================
+*/
+
+.mod_changelanguage {
+  float: right;
+  // @extend %nav;
+  // padding: 0 $baseline;
+  // margin-bottom: $baseline;
+  h4 {
+	// 	font-size: $font-size-small;
+	// 	display: inline-block;
+	// 	margin: 0 8px 0 0;
+  font-size: 14px;
+	display: inline-block;
+	margin-right: 8px;
+	margin-top: 0;
+	}
+  ul, li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+  }
+  li {
+    margin-right: 7px;
+    .lang-en, .lang-de {
+			display: block;
+			padding-left: 22px;
+			background-color: transparent;
+			background-position: left center;
+			background-repeat: no-repeat;
+		}
+		.lang-en {
+			background-image: url("/files/standard/layout/images/flags-en.png");
+		}
+
+		.lang-de {
+			background-image: url("/files/standard/layout/images/flags-de.png");
+		}
+  }
+}
+nav.mod_changelanguage .level_1 > li {
+	margin-left: 10px;
+}
+
+nav.mod_changelanguage li {
+	.active, &:hover > a {
+		color: $color;
+	}
+
+	&.last {
+		border-left: 1px solid $color;
+		padding-left: 14px;
+		margin-left: 5px;
+		line-height: 1.1;
+	}
+
+	a {
+		color: $color;
+		text-decoration: underline;
+	}
+}
+
+// TODO vorbereitet
+// .mod_changelanguage .level_1 > li { //CHANGED nav davor entfernt
+//   margin-left: 10px;
+// }
+// .mod_changelanguage li {
+//   .active, &:hover > a {
+//     color: currentColor;
+//   }
+//
+//   &.last {
+//     border-left: 1px solid $color;
+//     padding-left: 14px;
+//     margin-left: 5px;
+//     line-height: 1.1;
+//   }
+//
+//   a {
+//     color: $color;
+//     text-decoration: underline;
+//   }
+// }

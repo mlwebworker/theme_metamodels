@@ -1,0 +1,9 @@
+/* verticaler Rhythmus Hilfslinien - Ende */
+@mixin vertical_rhythm {
+  background-image: linear-gradient(rgba(200, 50, 50, .25) 1px, transparent 1px);
+  background-size: 1px $baseline;
+  background-position:  0 0;
+  // @include large {
+  //   background-size: 1px 26px;
+  // }
+}

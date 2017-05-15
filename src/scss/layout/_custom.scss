@@ -1,0 +1,87 @@
+/*
+=========================================================
+Stylesheet MM-Website
+LAYOUT/CUSTOM
+=========================================================
+*/
+
+.custom {
+	display: block;
+}
+
+.custom:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+// TODO vorbereitet
+// #subhead {
+//   @extend %invers;
+//   padding: $baseline 0;
+//   border-bottom: 3px solid $color-accent;
+//   margin-top: -17px; // TODO kann man sicher auch noch verbessern
+//   margin-bottom: $baseline / 2;
+//   box-shadow: rgba($shadow-color, 0.8) 0 3px 9px;
+//   .mod_article {
+//     border-bottom: none;
+//     @include min(55em) {
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//   }
+//   [class^="ce_"],
+//   [class*=" ce_"] {
+//     margin: 0;
+//     &:first-child {
+//       @include min(55em) {
+//         width: 65%;
+//       }
+//     }
+//   }
+//   h2 {
+//     @extend %headline-large;
+//     @extend %invers;
+//     line-height: 1.4 * $baseline; // FIXME ??durchbricht damit vertical Rhythm
+//     span { // TODO das ist noch zu wenig allgemein gueltig
+//       color: $color-accent;
+//     }
+//     a {
+//       text-decoration: none;
+//       color: $color-ochre;
+//     }
+//     &:not(.ce_headline) {
+//       padding: $baseline 0;
+//     }
+//   }
+//   .button {
+//     @extend %button-icon;
+//     @extend %invers;
+//     padding: $baseline;
+//     &:before {
+//       background-color: $bg-color;
+//       color: $color;
+//     }
+//     a {
+//       background-color: $bg-color;
+//       color: $color;
+//     }
+//   }
+// }
+// #breadcrumb {
+  // @include small {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+// }
+// #breadcrumb {
+//   .inside {
+//     @extend %content-width;
+//     @include small {
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//   }
+// }

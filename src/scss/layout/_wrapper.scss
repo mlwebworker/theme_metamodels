@@ -1,0 +1,45 @@
+/*
+=========================================================
+Stylesheet MM-Website
+LAYOUT/WRAPPER
+=========================================================
+*/
+
+// TODO outer-wrapper eliminieren
+#outer-wrapper, #wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#outer-wrapper {
+  height: 100%;
+}
+// TODO durchsehen mediaqueries auf mobile first trimmen, Klassen kontrolieren js, zum Teil schon fuer spaeter vorbereitet
+#wrapper {
+  // position: relative;
+  // width: 100%;
+  // min-width: $min-width;
+  min-height: 100%;
+}
+
+.js-ready {
+  // #wrapper {
+  //   @media (max-width: 1023px) {
+  //     right: 0;
+  //   }
+	// }
+}
+
+.js-nav {
+  // #wrapper {
+  //   @media (max-width: 1023px) {
+  //     right: 50%;
+  //   }
+  //   @media (max-width: 585px) {
+  //     right: 70%;
+  //   }
+  //   @media (max-width: 380px) {
+  //     right: 90%;
+  //   }
+  // }
+}

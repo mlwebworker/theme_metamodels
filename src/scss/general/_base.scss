@@ -1,0 +1,177 @@
+/*
+-------------------------------------------------
+GENERAL/BASE
+Basis Einstellungen
+-------------------------------------------------
+*/
+
+//HTML
+html {
+  font-size: 100%; //Standard 16px
+  font-size: 87.5%; //temporaere Einstellung zu Vermeidung von Bugs (14px)
+	line-height: 1.57143em; //temporaere Einstellung zu Vermeidung von Bugs
+  // @include fluid-typo(font-size, $screen-min, $screen-max, $basefont-min, $basefont-max);
+  // font-smoothing: antialiased;
+  // text-rendering: optimizeLegibility; // TODO spaeter einbauen
+  height: 100%;
+  overflow-y: scroll;
+}
+
+//BODY
+body {
+  background-color: $bg-color;
+  color: $color;
+  font-style: 400;
+  font-family: $font-family;
+//   line-height: $baseline;
+  -webkit-text-size-adjust: none;  //TODO notwendig?
+  height: 100%;
+//   margin: 0 auto;
+  margin: 0; // aus Original
+  padding: 0; // aus Original nicht noetig
+	border: 0; // aus Original nicht noetig
+}
+
+//TYPOGRAPHY
+//Fliesstext
+p {
+//   line-height: $baseline;
+//   margin: 0 0 $baseline;
+  margin: 0;
+}
+// Ueberschriften
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+//   line-height: $baseline;
+//   margin: $baseline 0;
+}
+h1,
+h2,
+h3 {
+  font-family: $font-family-headline;
+  font-weight: $font-weight-headline;
+}
+h1 {
+//   font-size: $font-size-h1;
+}
+h2 {
+  // font-size: $font-size-h2;
+  font-size: 2rem;
+  line-height: 3.36rem;
+  margin-bottom: 25px;
+}
+h3 {
+  // font-size: $font-size-h3;
+  font-size: 1.42857rem;
+  line-height: 2.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h4 {
+//   font-size: $font-size-h4;
+  font-size: 1.14286rem;
+  line-height: 1.92rem;
+  margin-top: 15px;
+}
+h5 {
+//   font-size: $font-size-h5;
+}
+h6 {
+//   font-size: $font-size-h6;
+}
+// Links
+// TODO Was davon ist wirklich in base richtig platziert
+a {
+  color: currentColor;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+// Hervorhebungen
+// TODO Was davon ist wirklich in base richtig platziert
+em {
+  font-family: $serif;
+  // color: $color-alternative;
+  // a {
+  //   color: $color-alternative;
+  // }
+}
+// horizontale Linie
+// hr {
+//   display: block;
+//   height: 1px;
+//   border: 0;
+//   border-top: 1px solid #999;
+//   margin: 1em 0;
+//   padding: 0;
+// }
+// Zitate
+// q {
+// 	quotes: "“" "”" "‘" "’";
+// }
+blockquote { // TODO Testen im Zummenhang mit vertical Rhythm
+  color: $color-alternative;
+  font-style: italic;
+  margin: 5px 0 10px;
+  padding: 10px 0 0 40px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  position: relative;
+  &:before {
+    content: open-quote;
+    position: absolute;
+    //  font-size: 2rem;
+    font-size: 4em;
+    // line-height: 3rem;
+    left: 0;
+    top: 0;
+  }
+}
+
+// BILDER
+// TODO Was davon ist wirklich in base richtig platziert
+img { // aus Original nicht noetig
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+img,
+picture {
+  height: auto;
+  max-width: 100%;
+}
+// img {
+//   border-radius: 5px;
+//   margin-bottom: 10px;
+//   border: 1px solid #ccc;
+// }
+figure {
+  margin: 0;
+}
+
+// TABELLEN
+// TODO Was davon ist wirklich in base richtig platziert
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table {
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  padding: 15px 0 5px;
+}
+thead td {
+  font-weight: 600;
+}

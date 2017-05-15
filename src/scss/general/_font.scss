@@ -1,0 +1,12 @@
+/*
+================================================================================
+Stylesheet MM-Website
+GENERAL/FONTS
+================================================================================
+*/
+$use-font-local: false !default;
+
+@if $use-font-local {
+  // IDEA if oder case fuer verschiedene Schriftarten einsetzen
+  @include font-face("MetaModels", "../fonts/metamodels/fonts/MetaModels")
+}

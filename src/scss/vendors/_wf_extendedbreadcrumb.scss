@@ -1,0 +1,60 @@
+/*
+=========================================================
+Stylesheet MM-Website
+VENDORS/WF_EXTENDEDBREADCRUMB
+Ist auch eine Navigation Element nav
+Extension bringt kein eigenes CSS mit!!!
+=========================================================
+*/
+
+
+// Original
+
+.mod_wf_extendedBreadcrumb {
+	float: left;
+}
+
+
+.mod_wf_extendedBreadcrumb h4 {
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 8px;
+	margin-top: 0;
+}
+
+.mod_wf_extendedBreadcrumb {
+	ul, li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		list-style: none;
+	}
+}
+.mod_wf_extendedBreadcrumb li {
+	margin-right: 7px;
+}
+
+
+.mod_wf_extendedBreadcrumb {
+  // ul {
+  //   display: inline-block;
+  //   list-style: none;
+  //   list-style-image: none;
+  //   padding: 0;
+  //   margin: 0;
+  // }
+  // li {
+  //   margin-right: 7px;
+  //   display: inline-block;
+  // }
+  // a,
+  // span {
+  //   display: block;
+  // }
+  // h4 {
+	// 	font-size: 14px; // FIXME Schriften rem
+	// 	display: inline-block;
+	// 	margin: 0 8px 0 0;
+  // }
+}

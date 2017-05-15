@@ -1,0 +1,88 @@
+/*
+=========================================================
+Stylesheet MM-Website
+LAYOUT/FOOTER
+=========================================================
+*/
+
+footer {
+	background-color: #2b2b2b;
+	border-top: 1px solid #000;
+	height: 77px;
+	margin-top: -77px;
+	position: relative;
+
+	.inside {
+		width: 90%;
+		max-width: 1100px;
+		margin: 0 auto;
+		font-size: 13px;
+		padding: 25px 0;
+	}
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+
+		+ nav {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		color: #8f8f8f;
+		margin-right: 30px;
+	}
+
+	nav li {
+		border-left: 1px solid #8f8f8f;
+		padding-left: 20px;
+
+		&:first-child {
+			border: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+// footer { // CHANGED erst mal zurueckgestellt
+//   background-color: #2b2b2b;
+//   border-top: 1px solid #000;
+//   // height: 77px;
+//   // margin-top: -77px; // FIXME Gesamthoehe 100% Sticky footer
+//   // position: relative;
+//
+//   .inside {
+//     display: flex;
+//     flex-flow: column;
+//     justify-content: center;
+//     width: 90%;
+//     max-width: $max-width;
+//     margin: 0 auto;
+//     font-size: 13px; // FIXME relative Schriftgroessen
+//     @include medium {
+//       flex-flow: row;
+//       justify-content: flex-start;
+//     }
+//   }
+//   p {
+//     color: #8f8f8f;
+//     text-align: center;
+//     margin: 25px 0 0;
+//     @include medium {
+//       text-align: left;
+//       margin: 25px 30px 0 0;
+//     }
+//   }
+//   .nav-meta {
+//     margin: 25px 0 0;
+//     @include medium {
+//       margin: 25px 30px 0;
+//     }
+//   }
+//   #social {
+//     margin: 25px 0 25px;
+//     @include medium {
+//       margin: 25px 0 25px auto;
+//     }
+//   }
+// }

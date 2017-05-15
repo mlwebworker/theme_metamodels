@@ -1,0 +1,78 @@
+/*
+=========================================================
+Stylesheet MM-Website
+COMPONENTS/SOCIAL_MEDIA_LINKS
+=========================================================
+*/
+
+// TODO wiederverwendbare Module besser rausarbeiten
+// CHANGED zunächst Originalcode verwenden
+// #social {
+//   @extend %nav;
+//   a {
+//     text-decoration: none;
+//   }
+//   a,
+//   span {
+//     display: block;
+//   }
+//   .level_1 {
+//     display: flex;
+//     justify-content: center;
+//     @include medium {
+//       justify-content: flex-start;
+//     }
+//   }
+//   li {
+//     margin-left: 20px;
+//     &:first-child {
+//       margin-left: 0;
+//     }
+//     > a,
+//     > span {
+//       color: #8f8f8f;
+//     }
+//     > .active,
+//     > .trail {
+//       color: #fff;
+//       position: relative;
+//     }
+//     &:hover {
+//       > a {
+//         color: #fff;
+//         position: relative;
+//       }
+//     }
+//   }
+//   a {
+//     &:before {
+//       font-size: 22px; // FIXME umstellen auf rem??
+//     }
+//     span {
+//       display: none; // TODO Text fuer Screenreader, bessere Loesung finden
+//     }
+//   }
+// }
+
+#social {
+	float: right;
+
+	li {
+		border: 0;
+		padding-left: 0;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	a {
+		&:before {
+			font-size: 22px;
+		}
+
+		span {
+			display: none;
+		}
+	}
+}

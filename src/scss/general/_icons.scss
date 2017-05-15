@@ -1,0 +1,73 @@
+/*
+================================================================================
+Stylesheet MM-Website
+GENERAL/ICONS
+================================================================================
+*/
+* {
+	&:before, &:after {
+		font-family: "MetaModels";
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+i {
+	font-style: italic;
+
+	&.icon {
+		font-style: normal;
+	}
+}
+
+.icon.blue {
+	color: #009dd1;
+}
+
+
+
+// TODO vorbereitet, aber alter Code noch drin, weil noch sauber einzuarbeiten
+// .facts,
+// .icon {
+//   &[class^="icon-"]:before,
+//   &[class*=" icon-"]:before {
+//     font-size: 20px;
+//     vertical-align: -2px;
+//     line-height: 1;
+//     margin-right: 10px;
+//   }
+// }
+// .list {
+//   &[class^="icon-"] a:before,
+//   &[class*=" icon-"] a:before {
+//     font-size: 20px;
+//     vertical-align: middle;
+//     line-height: 1;
+//     margin-right: 10px;
+//   }
+// }
+//
+//
+// @each $name, $char in $icons {
+//   .button.icon-#{$name} a:before,
+//   .list.icon-#{$name} a:before,
+//   .info.icon-#{$name}:before,
+//   // .facts.icon-#{$name}:before,
+//   // .metamodels.icon-#{$name},
+//   .icon.icon-#{$name}:before
+//   {
+//     content: $char;
+//   }
+// }
+//
+// .icon {
+//   &.blue:before,
+//   &.accent:before { // TODO Klasse umbenennen
+//     color: $color-accent;
+//   }
+// }

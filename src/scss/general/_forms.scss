@@ -1,0 +1,196 @@
+/*
+--------------------------------------------------------------------------------
+GENERAL/FORMS
+Basis Einstellungen Formulare
+BUG Fieldset kann nicht als Flexcontainer eingesetzt werden
+--------------------------------------------------------------------------------
+*/
+$border-color: #999 !default;
+$bg-color-accent: #0000ff !default;
+$bg-color-form-submit: #999 !default;
+
+// TODO aus Original auf sinvoll untersuchen
+form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  margin-top: 8px;
+
+	&[target="_top"] {
+		margin-top: 10px;
+	}
+}
+.formbody > div {
+	margin-bottom: 30px;
+}
+.formbody > div label {
+	display: block;
+	width: 100%;
+	margin-bottom: 2px;
+}
+form br {
+	display: none;
+}
+input, textarea, select {
+	border-radius: 2px;
+	padding: 5px;
+  border: 1px solid gray;
+	padding: 8px;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: 400;
+	border-radius: 2px;
+	border: 1px solid #ebebeb;
+}
+input {
+	&[type="text"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="datetime"]:focus, &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="tel"]:focus, &[type="time"]:focus, &[type="url"]:focus {
+		outline: 0 none;
+	}
+}
+input {
+  position: relative;
+  &[type="file"] {
+    cursor: pointer;
+    display: block;
+    width: auto;
+  }
+
+  &[type="image"], &[type="submit"], &[type="reset"], &[type="button"], &[type="radio"], &[type="checkbox"] {
+    width: auto;
+  }
+  &[type="image"] {
+  	border: 0;
+  	padding: 0;
+  	margin-top: 5px;
+  }
+  &[type="checkbox"], &.checkbox {
+    top: -1px;
+    margin-right: 5px;
+  }
+  &[type="radio"], &.radio {
+    top: 2px;
+    margin-right: 5px;
+  }
+  &[type="text"]:focus, &[type="password"]:focus, &[type="date"]:focus, &[type="datetime"]:focus, &[type="email"]:focus, &[type="number"]:focus, &[type="search"]:focus, &[type="tel"]:focus, &[type="time"]:focus, &[type="url"]:focus {
+    background: none repeat scroll 0 0 #fafafa;
+    border: 1px solid #999;
+  }
+}
+textarea {
+  height: auto;
+}
+textarea:focus {
+	outline: 0 none;
+  background: none repeat scroll 0 0 #fafafa;
+	border: 1px solid #999;
+}
+select {
+	&[multiple], &[size] {
+		height: auto;
+	}
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+legend {
+	width: 100%;
+	display: block;
+	border: 0;
+}
+input, textarea, select {
+  border-radius: 2px;
+  border: 1px solid gray;
+	padding: 8px;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-style: 400;
+	border: 1px solid #ebebeb;
+}
+
+// TODO aus Original auf sinvoll untersuchen
+.entry, .formbody > div {
+	margin-bottom: 10px;
+}
+
+.entry label, .formbody > div label {
+	width: 100px;
+	display: inline-block;
+}
+
+.checkbox_container, .radio_container {
+	margin-top: 10px;
+}
+
+.checkbox_container input, .radio_container input {
+	width: auto;
+	vertical-align: middle;
+}
+
+.checkbox_container label, .radio_container label {
+	float: none;
+	display: inline;
+	vertical-align: middle;
+}
+
+.checkbox_container span, .radio_container span {
+	display: block;
+}
+
+.checkbox_container legend > span, .radio_container legend > span, span > input, input + label {
+	display: inline;
+}
+
+.captcha_text {
+	display: block;
+	float: none;
+}
+.submit_container {
+	margin: 10px 0;
+}
+span.captcha_text {
+	display: block;
+	margin-bottom: 5px;
+}
+input.submit {
+	padding: 8px 14px;
+	display: inline-block;
+	font-size: 16px;
+	border: 1px solid #009dd1;
+	background-color: #009dd1;
+	border-radius: 2px;
+	color: #fff;
+	text-shadow: 1px 1px 0 #006b8f;
+}
+.submit_container {
+	margin-top: 20px;
+}
+.widget label {
+	margin-right: 10px;
+	width: auto !important;
+}
+
+.entry { // Formular Kommentar
+	// background: red; //temporaer zum finden
+	margin-bottom: 30px;
+}
+
+.entry label {
+	display: block;
+	width: 100%;
+	margin-bottom: 2px;
+}
+
+.entry {
+	input {
+		&.text, &.captcha {
+			width: 100%;
+			border: 1px solid #ccc;
+		}
+	}
+
+	select, textarea {
+		width: 100%;
+		border: 1px solid #ccc;
+	}
+}
+// Ende Original

@@ -1,0 +1,141 @@
+// Settings Project
+// projektbezogene Variable
+//------------------------------------------------------------------------------
+
+// LAYOUT
+$min-width:  20rem; //320px
+$max-width:  1100px;
+// $min-height: 100vh;
+// $content-width: 750px;
+
+// Breakpoints
+$b-xxsmall : 20em;  // 320pxsmartphone (portrait)
+$b-xsmall  : 30em; // 480px smartphone (landscape)
+$b-small   : 37.5em; // 600px small tablet
+$b-medium  : 48em; // 768px tablet (portrait)
+$b-large   : 64em; // 1024px tablet (landscape)
+$b-xlarge  : 90em;// 1440px desktop
+$b-xlarge-plus  : 100em;// 1600px desktop
+$b-xxlarge : 120em; // 1920px desktop
+
+
+//GENERAL/BASE
+// Typography global
+$use-font-local: true;
+$sans-serif: 'Roboto', Arial, Helvetica, sans-serif;
+$serif:      'Bitter', serif;
+
+$font-family:          $sans-serif;
+$font-family-headline: $serif;
+$font-family-print:    $serif;
+$font-weight: 400;
+$font-weight-headline: 400;
+
+// Fluid Typography global
+$screen-min: 20rem; // 320px (xxsmall)
+$screen-max: 68.75rem; // 1100px (max-width)
+$basefont-min: 0.875rem; // 14px
+$basefont-max: 1rem; // 16px
+
+$baseline: 1.625rem; // 22px bis 26px
+
+$font-size-small: 0.875rem; //12,25px bis 14px
+$font-size-medium: 1rem; //14px bis 16px
+$font-size-large: 1.5rem; //21px bis 24px
+
+
+// Headlines
+$font-size-h1: 1.5rem;
+$font-size-h2: 1.3125rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1rem;
+$font-size-h5: 1rem;
+$font-size-h6: 1rem;
+
+// Color-Schema
+  //  How to use color variables:
+  //  http://davidwalsh.name/sass-color-variables-dont-suck
+  //  http://chir.ag/projects/name-that-color/
+  // TODO Welche Farben werden genutzt? Einsatz Farbschatierungen verbessern/veraendern
+
+$cerulean           : #009dd1; // MetaModels CI ColorI Color wird genutzt
+// $cerulean-light     : lighten($cerulean, 4); // #00ACE6
+// $pacific-blue       : lighten($cerulean, 4); // #0092c2
+// $deep-cerulean      : darken($cerulean, 7); // #007DA7
+// $orient             : darken($cerulean, 13); // #00678A
+
+$alabaster          : darken(white, 2); // #FAFAFA wird genutzt
+$white-smoke         : darken(white, 4); // #F5F5F5 wird genutzt // TODO wo benoetigt direkt berechnen ?
+// $gallery            : darken(white, 8); // #EBEBEB
+// $alto               : darken(white, 13); // #DEDEDE
+$silver             : darken(white, 20); // #CCCCCC wird genutzt
+// $dusty-gray         : darken(white, 40); // #999999
+$gray               : darken(white, 44); // #8F8F8F wird genutzt
+$dove-gray          : lighten(black, 43); // #6e6e6e wird genutz
+$mine-shaft         : lighten(black, 15); // #262626 wird genutzt
+$mine-shaft-light   : lighten(black, 17); // #2b2b2b wird genutzt
+// $mine-shaft-lighter : lighten(black, 21); // #363636
+
+$color-ochre        : #DB7628; // Contao CI Color
+
+// Background global
+$bg-color             : $alabaster;
+$bg-color-darkened : $white-smoke;
+$bg-color-invers      : $mine-shaft;
+$bg-color-invers-lightened: $mine-shaft-light;
+
+// Colors global
+$color:                   $mine-shaft;
+$color-alternative:       $dove-gray;
+$color-invers:            #fff;
+$color-accent:            $cerulean;
+$color-ci-contao: $color-ochre;
+
+// Border global
+$border-color: $silver;
+$border-color-invers: $mine-shaft;
+
+// Shadow global
+$shadow-color: $mine-shaft;
+
+/*
+ * Icon settings
+ *
+ * How to use icon variables and the new map function:
+ * http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+ * TODO hier ist noch einiges zu optimieren
+*/
+
+$icons: (
+ th             : "\f00a",
+ check          : "\f00c",
+ times          : "\f00d",
+ chevron-left   : "\f053",
+ chevron-right  : "\f054",
+ arrow-left     : "\f060",
+ arrow-right    : "\f061",
+ arrow-up       : "\f062",
+ arrow-down     : "\f063",
+ plus           : "\f067",
+ minus          : "\f068",
+ chevron-up     : "\f077",
+ chevron-down   : "\f078",
+ twitter        : "\f099",
+ facebook       : "\f09a",
+ github         : "\f09b",
+ rss            : "\f09e",
+ envelope       : "\f0e0",
+ desktop        : "\f108",
+ quote-left     : "\f10d",
+ quote-right    : "\f10e",
+ cloud-download : "\f0ed",
+ euro           : "\f153",
+ comment        : "\f075",
+ globe          : "\f0ac",
+ file           : "\f15b",
+ calendar       : "\f073",
+ user           : "\f007",
+ group          : "\f0c0",
+ transifex      : "\e600",
+ book           :"\e900"
+);

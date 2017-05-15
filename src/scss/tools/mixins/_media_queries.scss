@@ -1,0 +1,212 @@
+// Breakpoints
+//em verwenden, da rem in media-queries problematisch in manchen Browsern
+$b-xxsmall : em(320) !default;  // 20em smartphone (portrait)
+$b-xxsmall-max : em(479) !default;  // 20em smartphone (portrait)
+$b-xsmall  : em(480)!default; // 30em smartphone (landscape)
+$b-xsmall-max  : em(599)!default; // 30em smartphone (landscape)
+$b-small   : em(600) !default; // 37,5em small tablet
+$b-small-max   : em(767) !default; // 37,5em small tablet
+$b-medium  : em(768) !default; // 48em tablet (portrait)
+$b-medium-max  : em(1023) !default; // 48em tablet (portrait)
+$b-large   : em(1024), !default; // 64em tablet (landscape)
+$b-large-max   : em(1439), !default; // 64em tablet (landscape)
+$b-xlarge  : em(1440) !default;// 90em desktop
+$b-xlarge-max  : em(1919) !default;// 90em desktop
+$b-xlarge-plus  : em(1600) !default;// 100em desktop
+$b-xxlarge : em(1920) !default; // 120em
+
+// Hightresolution
+$retina        : "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)" !default;
+
+// variable Breiten
+@mixin min($b-min) { // min-width
+  @media only screen and (min-width: #{$b-min}) {
+    @content;
+  }
+}
+@mixin max($b-max) { // max-width
+  @media only screen and (max-width: #{$b-max}) {
+    @content;
+  }
+}
+
+@mixin only($b-min, $b-max) { // min-width bis max-width
+  @media only screen and (min-width: #{$b-min}) and (max-width: #{$b-max}) {
+    @content;
+  }
+}
+
+// ab einer Breite
+@mixin xxsmall {
+  @media only screen and (min-width: #{$b-xxsmall}) {
+    @content;
+  }
+}
+
+@mixin xxsmall-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-xxsmall}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xxsmall}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xxsmall}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-xxsmall}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-xxsmall}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @media only screen and (min-width: #{$b-xsmall}) {
+    @content;
+  }
+}
+
+@mixin xsmall-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-xsmall}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xsmall}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xsmall}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-xsmall}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-xsmall}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (min-width: #{$b-small}) {
+    @content;
+  }
+}
+
+@mixin small-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-small}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-small}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-small}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-small}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-small}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: #{$b-medium}) {
+    @content;
+  }
+}
+
+@mixin medium-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-medium}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-medium}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-medium}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-medium}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-medium}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: #{$b-large}) {
+    @content;
+  }
+}
+
+@mixin large-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-large}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-large}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-large}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-large}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-large}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media only screen and (min-width: #{$b-xlarge}) {
+    @content;
+  }
+}
+
+@mixin xlarge-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-xlarge}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xlarge}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xlarge}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-xlarge}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-xlarge}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin xlarge-plus {
+  @media only screen and (min-width: #{$b-xlarge-plus}) {
+    @content;
+  }
+}
+
+@mixin xlarge-plus-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-xlarge-plus}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xlarge-plus}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xlarge-plus}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-xlarge-plus}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-xlarge-plus}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin xxlarge {
+  @media only screen and (min-width: #{$b-xxlarge}) {
+    @content;
+  }
+}
+
+@mixin xxlarge-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-xxlarge}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xxlarge}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-xxlarge}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-xxlarge}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-xxlarge}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+//auschliesslich ein Bereich
+@mixin only-xxsmall {
+  @media only screen and (min-width: #{$b-xxsmall}) and (max-width: #{$b-xxsmall-max}) {
+    @content;
+  }
+}
+
+@mixin only-xsmall {
+  @media only screen and (min-width: #{$b-xsmall}) and (max-width: #{$b-xsmall-max}) {
+    @content;
+  }
+}
+
+@mixin only-small {
+  @media only screen and (min-width: #{$b-small}) and (max-width: #{$b-small-max}) {
+    @content;
+  }
+}
+
+@mixin only-medium {
+  @media only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) {
+    @content;
+  }
+}
+@mixin only-medium-hidpi($ratio: 1.3) {
+  @media only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-width: #{$b-medium}) and (max-width: #{$b-medium-max}) and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin only-large {
+  @media only screen and (min-width: #{$b-large}) and (max-width: #{$b-large-max}) {
+    @content;
+  }
+}
+
+@mixin only-xlarge {
+  @media only screen and (min-width: #{$b-xlarge}) and (max-width: #{$b-xlarge-max}) {
+    @content;
+  }
+}

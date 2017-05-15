@@ -1,0 +1,32 @@
+/*
+=========================================================
+Stylesheet MM-Website
+COMPONENTS/MOD_SITEMAP
+=========================================================
+*/
+
+.mod_sitemap {
+  ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+  }
+  li ul {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  a {
+    padding-bottom: 7px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+      content: "\f054";
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+}

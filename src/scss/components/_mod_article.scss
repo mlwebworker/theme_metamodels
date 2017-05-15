@@ -1,0 +1,101 @@
+/*
+=========================================================
+Stylesheet MM-Website
+COMPONENTS/MOD_ARTICLE
+=========================================================
+*/
+
+.mod_article {
+  border-bottom: 1px solid #dedede;
+  ul, ol {
+    // padding: 0 0 0 20px; //TODO So etwas gehoert in ce_text
+    // margin: 5px 10px 5px;
+  }
+
+  ul {
+    // list-style: disc;//TODO sollte doch der Standard sein
+  }
+
+  ol {
+    // list-style: decimal;//TODO sollte doch der Standard sein
+  }
+
+  li {
+    // padding: 1px 0;
+  }
+  &.last, &:last-child {
+		border: none;
+	}
+  .inside {
+    padding: 75px 0;
+  	width: 90%;
+  	max-width: 1100px;
+  	margin: 0 auto;
+  }
+  &.wide .inside {
+		width: 100%;
+		max-width: none;
+	}
+	&.fixed {
+		background-color: $color;
+		margin-bottom: 15px;
+		border-bottom: 3px solid #009dd1;
+		box-shadow: rgba(38, 38, 38, 0.8) 0 3px 9px;
+		&.fixed-last {
+			background-color: $color;
+			margin-bottom: 15px;
+			border-bottom: 3px solid #009dd1;
+			box-shadow: rgba(38, 38, 38, 0.8) 0 3px 9px;
+		}
+		&.fixed-first {
+			margin-bottom: 0;
+			border-bottom-width: 1px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+		}
+		.inside {
+			// padding: 50px 0;
+      padding: $baseline 0 2 * $baseline; //NOTE erst mal Provisorium
+		}
+    .ce_semantic_html5 {
+  		position: relative;
+  		overflow: hidden;
+  	}
+    .ce_headline, .teaser {
+  		width: 68%;
+  		display: block;
+  		vertical-align: middle;
+  		padding-right: 50px;
+      @include large {  //NOTE Provisorium
+        float: left;
+      }
+  	}
+    h2 {
+		color: #fff;
+		font-size: 24px;
+		line-height: 28.8px;
+		font-size: 1.71429rem;
+		line-height: 2.88rem;
+		margin-bottom: 0;
+  		span {
+  			color: #009dd1;
+  		}
+  		a {
+  			text-decoration: none;
+  			color: #db7628;
+  		}
+	  }
+	}
+}
+
+
+// .mod_article { // TODO Unnoetiges Streichen, Ueberschreiben vermeiden
+  // border-bottom: 1px solid #dedede;
+  // &.last, &:last-child {
+  //   border: none;
+  // }
+  // .inside {
+    // @extend %content-width;
+  // }
+// }

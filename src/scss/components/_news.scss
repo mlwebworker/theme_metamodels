@@ -1,0 +1,93 @@
+/*
+================================================================================
+Stylesheet MM-Website
+COMPONENTS/NEWS
+================================================================================
+*/
+
+.news h3.ce_headline {
+	margin-top: 0;
+}
+
+.layout_news h3 {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.mod_newslist h3 a {
+	text-decoration: none;
+}
+
+.layout_news p.info {
+	display: inline-block;
+	margin-right: 40px;
+
+	&:before {
+		font-size: 22px;
+		margin-right: 10px;
+		vertical-align: middle;
+		position: relative;
+		top: -2px;
+	}
+}
+.mod_newslist .layout_news {
+	margin-bottom: 45px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 45px;
+
+	&.last {
+		margin-bottom: 0;
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+.layout_news {
+	img {
+		border: 1px solid #ccc;
+	}
+
+	blockquote {
+		margin-bottom: 25px;
+	}
+}
+
+// TODO vorbereitet
+// .mod_newslist {
+//   padding: 0 $baseline;
+//   .layout_news {
+//     padding-bottom: $baseline;
+//     border-bottom: 1px solid #dedede;
+//     margin-bottom: 2 * $baseline;
+//     &.last, &:last-child {
+//       border: none;
+//     }
+//   }
+//
+//   .layout_full {
+//
+//   }
+//
+//   .layout_latest {
+//
+//   }
+//
+//   .layout_simple {
+//
+//   }
+//
+//   .layout_short {
+//
+//   }
+//
+//   .info {
+//     font-size: $font-size-small;
+//     display:inline-block;
+//     margin-right:  $baseline * 1.5;
+//   }
+//
+//   .teaser {
+//
+//   }
+//
+// }

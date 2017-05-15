@@ -1,0 +1,73 @@
+/*
+=========================================================
+Stylesheet MM-Website
+LAYOUT/HEADER
+=========================================================
+*/
+
+header {
+	border-bottom: 3px solid #009dd1;
+	margin-bottom: 15px;
+	background-color: #2b2b2b;
+	box-shadow: rgba(38, 38, 38, 0.8) 0 3px 9px;
+
+	.inside {
+		width: 90%;
+		max-width: 1100px;
+		margin: 0 auto;
+		position: static;
+	}
+}
+
+.fixed header {
+	border-bottom-width: 1px;
+	margin-bottom: 0;
+}
+
+h1 { // TODO eher aufs Logo setzen
+	width: 169px;
+	height: 120px;
+	float: left;
+	margin: 0;
+	display: block;
+
+	a {
+		display: block;
+		width: 169px;
+		height: 120px;
+		text-indent: -99999px;
+		background-image: url("/files/standard/layout/images/metamodels.png");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+// header { // TODO vorbereitet fuer spaeter
+//   background-color: $bg-color-invers-lightened;
+//   border-bottom: 3px solid $cerulean;
+//   margin-bottom: 15px;
+//   box-shadow: rgba(38, 38, 38, 0.8) 0 3px 9px;
+//   .inside {
+//     @extend %content-width;
+//     display: flex;
+//     justify-content: space-between;
+//     position: static;
+//   }
+//   .fixed & {
+//     border-bottom-width: 1px;
+// 		margin-bottom: 0;
+//   }
+//   .logo {
+//     flex: 0 0 auto;
+//   }
+//   .mod_navigation {
+//     // flex: 1
+//     // margin-left: auto;
+//   }
+//   .mobile {
+//     margin: 0.1 * $baseline 0 0 auto;
+//     @include medium {
+//       margin-top: 0.5 * $baseline;
+//     }
+//   }
+// }

@@ -1,0 +1,71 @@
+/*
+--------------------------------------------------------------------------------
+GENERAL/CONTAO_RESET
+von Contao verwendete Klassen
+ --------------------------------------------------------------------------------
+ */
+// Float Klassen
+.float_left {
+	// float: left;
+}
+.float_right {
+	// float: right;
+}
+// Clear Floats
+.block {
+	overflow: hidden;
+}
+.clear {
+	// @include easy-clearing; // TODO Clearing ueberdenken bzw. modernisieren und eventuel nicht als mixin
+}
+.clear, #clear { // TODO umbauen
+	height: 0.1px;
+	font-size: 0.1px;
+	line-height: 0.1px;
+	clear: both;
+}
+.clearfix { // TODO umbauen
+	*zoom: 1;
+
+	&:before {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+// nur fuer Screenreader lesbar
+// based on HTML5 Boilerplate:
+// github.com/h5bp/html5-boilerplate/issues/194#issuecomment-564745
+// aus Contao Framework
+.invisible { // TODO modernisieren
+	// position: absolute;
+	// clip: rect(0, 0, 0, 0);
+	// width: 1px;
+	// height: 1px;
+	// padding: 0;
+	// border: 0;
+	// margin: -1px;
+	// overflow: hidden;
+	width: 0;
+	height: 0;
+	left: -1000px;
+	top: -1000px;
+	position: absolute;
+	overflow: hidden;
+	display: inline;
+}
+
+// TODO uebernommen aber ist das richtig
+.inside {
+	position: relative;
+}
+div {
+	&.more, &.back {
+		margin-top: 10px;
+	}
+}

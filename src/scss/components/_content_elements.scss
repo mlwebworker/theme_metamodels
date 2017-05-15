@@ -1,0 +1,545 @@
+/*
+=========================================================
+Stylesheet MM-Website
+COMPONENTS/CONTENT-ELEMENTS
+=========================================================
+*/
+
+// Placeholder
+%invers {
+  background: $bg-color-invers;
+  color: $color-invers;
+}
+
+%invers-light {
+  background: $bg-color-invers-lightened;
+  color: $color-invers;
+}
+
+%content-width {
+  max-width: calc(#{$max-width} + 2 * #{$baseline});
+  margin: 0 auto;
+  @include medium {
+    width: calc(90% + 2 * #{$baseline});
+  }
+}
+
+%headline-small {
+  font-family: $font-family-headline;
+  font-weight: $font-weight-headline;
+  font-size: $font-size-small;
+}
+
+%headline-medium {
+  font-family: $font-family-headline;
+  font-weight: $font-weight-headline;
+  font-size: $font-size-medium;
+}
+
+%headline-large {
+  font-family: $font-family-headline;
+  font-weight: $font-weight-headline;
+  font-size: $font-size-large;
+}
+
+// von den Basiseinstellungen abweichende Schriftgroessen bei Ueberschriften
+// .headline-small {
+//   @extend %headline-small;
+// }
+// .headline-medium {
+//   @extend %headline-medium;
+// }
+// .headline-large {
+//   @extend %headline-large;
+// }
+
+// von den Basiseinstellungen abweichende Schriftgroessen im Fliesstext
+// .text-small {
+//   font-size: $font-size-small;
+// }
+// .text-medium {
+//   font-size: $font-size-medium;
+// }
+// .text-large {
+//   font-size: $font-size-large;
+// }
+.ce_text,
+.ce_list {
+  ul, ol {
+    padding: 0 0 0 20px;
+    margin: 5px 10px 5px;
+  }
+  li {
+    padding: 1px 0;
+  }
+}
+
+// Original
+div {
+	&[class*="ce_"] {
+		&.boxed {
+			background-color: #f5f5f5;
+			padding: 25px;
+			border-radius: 5px;
+			border: 1px solid $border-color;
+		}
+
+		&.bordered img {
+			border-radius: 5px;
+			border: 1px solid $border-color;
+		}
+
+		&.text-image {
+			img {
+				margin-bottom: 10px;
+			}
+
+			em {
+				font-family: 'Bitter', serif;
+				color: #6e6e6e;
+			}
+
+			p {
+				padding-bottom: 0;
+
+				+ p {
+					padding-top: 0;
+				}
+
+				a {
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+// TODO vorbereitet
+// alle Content-Elemente
+// [class^="ce_"],
+// [class*=" ce_"] {
+//   padding: 0 $baseline;
+//   margin-bottom: $baseline;
+//   :first-child {
+//     margin-top: 0;
+//   }
+//   :last-child {
+//     // margin-bottom: 0;
+//   }
+//   &.invers {
+//     @extend %invers;
+//     padding: $baseline;
+//   }
+// }
+
+// Content-Element Gallery
+.ce_gallery {
+	ul {
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		list-style-image: none;
+		list-style-type: none;
+		margin-left: 0;
+	}
+
+	li {
+		float: left;
+
+		&.col_first {
+			clear: left;
+		}
+	}
+}
+// Content-Element ce_list
+
+.ce_list {
+  &.contributors {
+    margin-top: 30px;
+
+    ul {
+      margin: 0;
+      padding: 10px 0 0;
+      list-style: none;
+    }
+  }
+
+  &.sponsors ul {
+    margin: 0;
+    padding: 10px 0 0;
+    list-style: none;
+  }
+
+  &.contributors li, &.sponsors li {
+    width: 31.3%;
+    display: block;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 20px;
+    vertical-align: top;
+    border-bottom: 1px solid $border-color;
+    margin-right: 3%;
+    padding-bottom: 10px;
+    float: left;
+    // @media (max-width: 1000px) {
+    //   width: 47.5%;
+    // }
+    // @media (max-width: 715px) {
+    //   width: 100%;
+    // }
+  }
+
+  &.contributors li {
+    padding-left: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &.sponsors li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &.contributors li:nth-last-child(-n+3), &.sponsors li:nth-last-child(-n+3) {
+    border-bottom: 0;
+  }
+
+  &.contributors li:nth-child(n), &.sponsors li:nth-child(n) {
+    // @media (max-width: 1000px) {
+    //   margin-right: 5%;
+    // }
+    // @media (max-width: 715px) {
+    //   margin-right: 0;
+    // }
+  }
+
+  &.contributors li:nth-child(2n), &.sponsors li:nth-child(2n) {
+    // @media (max-width: 1000px) {
+    //   margin-right: 0;
+    // }
+  }
+
+  &.contributors li:nth-last-child(n), &.sponsors li:nth-last-child(n) {
+    // @media (max-width: 1000px) {
+    //   border-bottom: 1px solid #cdcdcd;
+    // }
+    // @media (max-width: 715px) {
+    //   border-bottom: 1px solid #cdcdcd;//TODO: Dopplung vermeiden
+    // }
+  }
+
+  &.contributors li:nth-last-child(-n+2), &.sponsors li:nth-last-child(-n+2) {
+    // @media (max-width: 1000px) {
+    //   border-bottom: 0;
+    // }
+  }
+  &.contributors li:last-child, &.sponsors li:last-child {
+    // @media (max-width: 715px) {
+    //   border-bottom: 0;
+    // }
+  }
+  &.contributors li a:before, &.sponsors li:before {
+    content: "\f054";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 18px;
+  }
+  &.contributors li a {
+    &:before {
+      font-size: 22px;
+      top: 0;
+    }
+
+    &.github:before {
+      content: "";
+    }
+
+    &.transifex:before {
+      content: "\e600";
+      font-size: 20px;
+    }
+  }
+  &.stats {
+		ul {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			list-style: none;
+
+			li {
+				width: 18%;
+				display: block;
+				text-align: center;
+				margin-right: 2.25%;
+				vertical-align: top;
+				float: left;
+        // @media (max-width: 1060px) {
+        //   width: 30.3%;
+      	// 	margin-right: 3%;
+        // }
+        // @media (max-width: 715px) {
+        //   width: 47.5%;
+    		// 	margin-right: 5%;
+        // }
+        // @media (max-width: 350px) {
+        //   width: 100%;
+      	// 	margin-right: 0;
+        // }
+				&:last-child {
+					margin-right: 0;
+          // @media (max-width: 350px) {
+          //   margin-bottom: 0;
+          // }
+				}
+        // &:nth-child(n) {
+        //   @media (max-width: 715px) {
+        //     margin-right: 5%;
+        //   }
+        //   @media (max-width: 350px) {
+        //     margin-right: 0;
+        //   }
+        // }
+        // &:nth-child(2n) {
+        //   @media (max-width: 715px) {
+    		// 		margin-right: 0;
+        //   }
+  			// }
+        // &:nth-child(3n) {
+        //   @media (max-width: 1060px) {
+        //     margin-right: 0;
+        //   }
+    		// }
+        // &:nth-child(-n+3) {
+        //   @media (max-width: 1060px) {
+        //     margin-bottom: 40px;
+        //   }
+        //   @media (max-width: 715px) { //TODO Doppelung vverhindern
+        //     margin-bottom: 40px;
+        //   }
+    		// }
+        // &:nth-child(-n+3), &:nth-child(-n+5) {
+        //   @media (max-width: 715px) {
+        //     margin-bottom: 0;
+        //   }
+        //   @media (max-width: 350px) {
+        //     margin-bottom: 40px;
+        //   }
+    		// }
+			}
+		}
+		strong {
+			font-family: 'Bitter', serif;
+			font-weight: 100;
+			display: block;
+			font-size: 42px;
+			line-height: 50.4px;
+			font-size: 3rem;
+			line-height: 5.04rem;
+			padding: 0 5px 7px;
+			margin-bottom: 18px;
+			border-bottom: 1px solid $border-color;
+      // @media (min-width: 350px) and (max-width: 460px) {
+      //   font-size: 35px;
+      // }
+		}
+	}
+}
+
+// Content-Element ce_downloads
+.ce_downloads {
+//   &.invers {
+//     a {
+//       &:hover:before {
+//         color: currentColor;
+//       }
+//     }
+//   }
+//   .mime_icon {
+//     display: none;
+//   }
+  img {
+    display: none;
+  }
+  ul {
+//     font-size: $font-size-small;
+    list-style: none;
+//     list-style-image: none;
+    padding: 0;
+//     margin: 0;
+		margin: 15px 0 0;
+  }
+  li {
+    // padding: $baseline / 2 0 calc(#{$baseline} / 2 - 1px);
+    //  border-bottom: 1px solid $silver;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $border-color;
+    margin: 10px 0;
+    &:last-child {
+          // padding: $baseline / 2 0;
+          // border-bottom: 0;
+          border-bottom: 0;
+          padding-bottom: 0;
+          margin-bottom: 0;
+    }
+  }
+  a {
+    // color: currentColor;
+    text-decoration: none;
+    display: block;
+    display: inline-block;
+    &:before {
+			content: "\f0ed";
+			display: inline-block;
+			font-size: 20px;
+			vertical-align: middle;
+			margin-right: 10px;
+			position: relative;
+			top: -1px;
+			color: #009dd1;
+		}
+    @include icon(before, cloud-download) {
+      font-size: 20px;
+      vertical-align: middle;
+      line-height: 1;
+      margin-right: 10px;
+      color: $color-accent;
+    }
+    &:hover:before {
+      color: $color;
+    }
+  }
+  span {
+    color: $color-alternative;
+    color: #6e6e6e;
+  }
+}
+
+// Content-Element ce_hyperlink
+// .ce_hyperlink {
+//   padding: 0 $baseline;
+//   &[class*="invers"] {
+//     padding: $baseline;
+//     background: $bg-color-invers;
+//     color: $color-invers;
+//   }
+//   &.list {
+//     font-size: $font-size-small;
+//     margin-bottom: $baseline / 2;
+//     a {
+//       text-decoration: none;
+//     }
+//   }
+//   .hyperlink_txt {
+//   }
+//   .hyperlink_img {
+//   }
+// }
+
+// Content-Element ce_accordion
+.ce_accordion .toggler {
+	cursor: pointer;
+	outline: none;
+
+	.ui-icon {
+		width: 0;
+		height: 0;
+		display: inline-block;
+		border-style: solid;
+		border-width: 5px 0 5px 10px;
+		border-color: transparent transparent transparent #000;
+		float: left;
+		margin: 8px 5px 0 0;
+		line-height: 15px;
+	}
+
+	.ui-icon-triangle-1-s {
+		border-width: 10px 5px 0 5px;
+		border-color: #000 transparent transparent transparent;
+	}
+}
+
+// Content-Element ce_accordion
+.ce_comments {
+  margin-top: 45px;
+  border-top: 1px solid $border-color;
+  padding-top: 50px;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  .info {
+    font-weight: bold;
+  }
+
+  ol {
+    margin-left: 0;
+    padding-left: 28px;
+  }
+
+  .form {
+    margin-top: 15px;
+  }
+
+  ol + .form {
+    margin-top: 35px;
+  }
+
+  .reply {
+    padding-left: 25px;
+  }
+}
+
+.ce_comments span {
+  &.captcha_text {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  &.mandatory {
+    margin-left: 5px;
+  }
+}
+
+/*
+================================================================================
+altes Zeug
+*/
+div {
+
+	&[class*="ce_"] {
+
+
+		&.list, &.back {
+			padding: 8px 0;
+		}
+
+		&.list a, &.back a {
+			display: inline-block;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+
+		&.list a:before, &.back a:before {
+			font-size: 22px;
+			margin-right: 7px;
+			padding-left: 1px;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: -1px;
+		}
+
+		&.list a:hover:before, &.back a:hover:before {
+			color: $color-accent;
+		}
+	}
+}

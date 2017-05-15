@@ -1,0 +1,8 @@
+// Quelle: Bourbon  derzeit strip-units
+// noch in BOURBON vorhanden aber mit depraceted fuer bourbon 5,
+// Ersatz dann strip-unit
+// weitere Quelle: Geoff Graham https://css-tricks.com/snippets/css/fluid-typography/
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}

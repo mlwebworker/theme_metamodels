@@ -1,0 +1,31 @@
+/*
+--------------------------------------------------------------------------------
+LOGO
+zugefuegte Klassen angelehnt an BEM http://getbem.com/
+--------------------------------------------------------------------------------
+*/
+
+// TODO hier noch sauberer mit invers arbeiten
+
+.logo {
+  //IDEA Logo nicht als Hintergrundbild verwenden, Ueberschriftenhierarchie verschieben, logo normales div nicht h1
+  // IDEA Hide Text aus Bourbon verwenden
+
+  @extend %invers-light;
+  padding: 0 $baseline;
+  margin: 0 ;
+  &__link {
+    display: block;
+    width: 169px;
+    // height: 80px;
+    height: 4 * $baseline; // 88px bis 104px
+    text-indent: -99999px;
+    background-image: url("/files/standard/layout/images/metamodels.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include medium {
+      height: 120px; // FIXME ??durchbricht damit vertical Rhythm
+      // height: 5 * $baseline;
+    }
+  }
+}

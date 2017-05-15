@@ -1,0 +1,60 @@
+/*
+=========================================================
+Stylesheet MM-Website
+LAYOUT/GRID
+=========================================================
+*/
+
+// IDEA bei Subcolumns ueber Einstellungen in Erweiterung ziehen und Original rausschmeissen
+// IDEA  Umstellung auf css-grid
+
+@media (max-width: 900px) {
+
+	.col_1 > div[class*="sub"] > h3:first-child {
+		margin-top: 0;
+	}
+
+	.ce_colsetPart > div[class*="sub"] > {
+		h3:first-child {
+			margin-top: 50px;
+		}
+
+		h4:first-child {
+			margin-top: 35px;
+		}
+	}
+
+	.subcolumns {
+		.first, .mod_colsetPart, .sc_second, > div {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.equalize > div {
+		display: block;
+	}
+
+	.subcolumns {
+		.mod_colsetPart, .ce_colsetPart, .sc_second {
+			margin-top: 0;
+		}
+
+		.subcl, .subcr, .subc {
+			padding: 0 !important;
+		}
+	}
+
+	.ym-grid {
+		.first, .ce_colsetStart, .ce_colsetPart, > div {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+
+		.ym-gbox-left, .ym-gbox, .ym-gbox-right {
+			padding: 0 !important;
+		}
+	}
+}
