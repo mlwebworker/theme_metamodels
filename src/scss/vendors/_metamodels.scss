@@ -6,62 +6,49 @@ Extension bringt kein eigenes CSS mit!!!
 =========================================================
 */
 .ce_metamodel_list { // TODO besser aufteilen verallgemeiner
-  .showcase {
-    @include small {
-      display: flex;
-      flex-flow: wrap;
-      justify-content: space-between;
-    }
-    .item {
-      @include small {
-        width: 47%;
-      }
-      p {
-        margin: 0;
-      }
-    }
-  }
-  .pagination {
-    @include small {
-
-    }
-  }
-  // opinions
+  // .showcase {
+  //   @include small {
+  //     display: flex;
+  //     flex-flow: wrap;
+  //     justify-content: space-between;
+  //   }
+  //   .item {
+  //     @include small {
+  //       width: 47%;
+  //     }
+  //     p {
+  //       margin: 0;
+  //     }
+  //   }
+  // }
+  // .pagination {
+  //   @include small {
+  //
+  //   }
+  // }
+  // =============================================================================
+  // opinion start
   // TODO strong und span ausmerzen im html-code
   .opinions {
-    @include large {
-      display: flex;
-      flex-flow: wrap;
-      justify-content: space-between;
+    @include min(950px) {
+      display: grid;
+      grid-gap: 2 * $baseline;
+      grid-template-columns: 1fr 1fr;
     }
     .item {
-      // display: inline-block;
-      // vertical-align: top;
-      // width: 47.5%;
-      // margin-right: 5%;
-      // position: relative;
-      margin-bottom: 55px;
-      @include large {
-        width: 47%;
+      @include min(950px) {
         display: flex;
         flex-flow: column;
       }
-      //
-      // &:nth-child(2n) {
-      // 	margin-right: 0;
-      // }
-      &:last-child {
-    		margin-bottom: 0;
-    	}
     }
     .opinion {
       border-radius: 5px;
       padding: 16px 28px;
       position: relative;
-      border: 1px solid $color;
-      color: #fff;
-      background-color: $color;
-      @include large {
+      border: 1px solid $border-color-bginvers;
+      color: $color-invers;
+      background-color: $bg-color-invers;
+      @include min(950px) {
         flex: 1;
       }
       &:after {
@@ -72,8 +59,8 @@ Extension bringt kein eigenes CSS mit!!!
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-color: #fafafa;
-        border-top-color: $color;
+        border-color: $border-color-bg;
+        border-top-color: $border-color-bginvers;
       }
     }
 
@@ -87,7 +74,7 @@ Extension bringt kein eigenes CSS mit!!!
 
       &:nth-child(even) .opinion:after {
         border-left: none;
-        border-top-color: $color;
+        border-top-color: $border-color-bginvers;
         border-width: 35px;
         right: 0;
         margin-right: 20px;
@@ -112,167 +99,195 @@ Extension bringt kein eigenes CSS mit!!!
     }
   }
 }
-
-
-// nur zum Testen
-#showcase-kopie {
-  .inside {
-    display: flex;
-    justify-content: space-between;
-    .ce_text {
-      width: 27%;
-    }
-    .ce_metamodel_list {
-      width: 60%;
+// Fallback fuer grid
+.opinions {
+  @supports not (display: grid) {
+    @include min(950px) {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      .item {
+        width: 47.5%;
+        margin-bottom: $baseline;
+      }
     }
   }
 }
+.ie,
+.edge {
+  .opinions {
+    @include min(950px) {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      .item {
+        width: 47.5%;
+        margin-bottom: $baseline;
+      }
+    }
+  }
+}
+// opinion end
+// =============================================================================
+// nur zum Testen
+// #showcase-kopie {
+//   .inside {
+//     display: flex;
+//     justify-content: space-between;
+//     .ce_text {
+//       width: 27%;
+//     }
+//     .ce_metamodel_list {
+//       width: 60%;
+//     }
+//   }
+// }
 
 // TODO Fallback fuer Grid
 // FIXME korrekte Abstaende erst nach allgemeine Schriftfestlegung
 
 
 // fundraising
-.fundraising .item {
-  border-bottom: 1px solid #dedede;
-}
-
-.fundraising .item:last-child {
-  border: none;
-}
-
-.fundraising .content {
-  padding: 75px 0;
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  @media (max-width: 900px) {
-    padding: 35px 0;
-  }
-}
-
-
-	.fundraising {
-		.item {
-			position: relative;
-		}
-
-		.completed .content {
-			opacity: 0.5;
-		}
-
-		.item {
-			h3 {
-				margin-top: 0;
-			}
-
-			&:first-child .content {
-				padding-top: 0;
-			}
-
-			&:last-child .content {
-				padding-bottom: 20px;
-			}
-
-			.ce_text {
-				display: inline-block;
-				vertical-align: top;
-				width: 60%;
-        @media (max-width: 1145px) {
-          width: 59%;
-        }
-        @media (max-width: 1000px) {
-          width: 100%;
-      		margin-right: 0;
-      		display: block;
-        }
-			}
-
-			p.facts {
-				margin: 5px 0 0;
-				display: inline-block;
-				margin-right: 40px;
-
-				&:before {
-					font-size: 22px;
-					margin-right: 10px;
-					vertical-align: middle;
-					position: relative;
-					top: -2px;
-				}
-			}
-		}
-	}
-
-  .fundraising {
-    .sponsoring {
-      display: inline-block;
-      width: 50%;
-      vertical-align: top;
-      @media (max-width: 585px) {
-        width: 100%;
-        display: block;
-
-        &:last-child {
-          margin-top: 25px;
-        }
-      }
-
-      strong {
-        display: block;
-      }
-    }
-
-    .thanks {
-      position: absolute;
-      top: 50%;
-      margin-top: -70px;
-      left: 0;
-      background-color: rgba(38, 38, 38, 0.9);
-      z-index: 1;
-      width: 100%;
-    }
-
-    .thanks-inside {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 25px 0;
-      color: #fff;
-
-      h4 {
-        margin-top: 0;
-        padding-top: 8px;
-      }
-    }
-  }
-
-  // Frontendfilter
-  .mod_metamodels_frontendfilter {
-    margin-bottom: 25px;
-  }
-
-
-
-// #############################################################################
-.ce_metamodel_nightlyinfo { // TODO schauen wo verwendet
-  margin-top: 40px;
-
-  table + h4 {
-    padding-top: 30px;
-  }
-
-  .last {
-    text-align: right;
-  }
-}
-
-.ce_metamodel_nightlyinfo td {
-  &.col_0 {
-    width: 60%;
-  }
-
-  &.col_1, &.col_2 {
-    width: 20%;
-  }
-}
+// .fundraising .item {
+//   border-bottom: 1px solid #dedede;
+// }
+//
+// .fundraising .item:last-child {
+//   border: none;
+// }
+//
+// .fundraising .content {
+//   padding: 75px 0;
+//   width: 90%;
+//   max-width: 1100px;
+//   margin: 0 auto;
+//   @media (max-width: 900px) {
+//     padding: 35px 0;
+//   }
+// }
+//
+//
+// 	.fundraising {
+// 		.item {
+// 			position: relative;
+// 		}
+//
+// 		.completed .content {
+// 			opacity: 0.5;
+// 		}
+//
+// 		.item {
+// 			h3 {
+// 				margin-top: 0;
+// 			}
+//
+// 			&:first-child .content {
+// 				padding-top: 0;
+// 			}
+//
+// 			&:last-child .content {
+// 				padding-bottom: 20px;
+// 			}
+//
+// 			.ce_text {
+// 				display: inline-block;
+// 				vertical-align: top;
+// 				width: 60%;
+//         @media (max-width: 1145px) {
+//           width: 59%;
+//         }
+//         @media (max-width: 1000px) {
+//           width: 100%;
+//       		margin-right: 0;
+//       		display: block;
+//         }
+// 			}
+//
+// 			p.facts {
+// 				margin: 5px 0 0;
+// 				display: inline-block;
+// 				margin-right: 40px;
+//
+// 				&:before {
+// 					font-size: 22px;
+// 					margin-right: 10px;
+// 					vertical-align: middle;
+// 					position: relative;
+// 					top: -2px;
+// 				}
+// 			}
+// 		}
+// 	}
+//
+//   .fundraising {
+//     .sponsoring {
+//       display: inline-block;
+//       width: 50%;
+//       vertical-align: top;
+//       @media (max-width: 585px) {
+//         width: 100%;
+//         display: block;
+//
+//         &:last-child {
+//           margin-top: 25px;
+//         }
+//       }
+//
+//       strong {
+//         display: block;
+//       }
+//     }
+//
+//     .thanks {
+//       position: absolute;
+//       top: 50%;
+//       margin-top: -70px;
+//       left: 0;
+//       background-color: rgba(38, 38, 38, 0.9);
+//       z-index: 1;
+//       width: 100%;
+//     }
+//
+//     .thanks-inside {
+//       width: 90%;
+//       max-width: 1100px;
+//       margin: 0 auto;
+//       padding: 25px 0;
+//       color: #fff;
+//
+//       h4 {
+//         margin-top: 0;
+//         padding-top: 8px;
+//       }
+//     }
+//   }
+//
+//   // Frontendfilter
+//   .mod_metamodels_frontendfilter {
+//     margin-bottom: 25px;
+//   }
+//
+//
+//
+// // #############################################################################
+// .ce_metamodel_nightlyinfo { // TODO schauen wo verwendet
+//   margin-top: 40px;
+//
+//   table + h4 {
+//     padding-top: 30px;
+//   }
+//
+//   .last {
+//     text-align: right;
+//   }
+// }
+//
+// .ce_metamodel_nightlyinfo td {
+//   &.col_0 {
+//     width: 60%;
+//   }
+//
+//   &.col_1, &.col_2 {
+//     width: 20%;
+//   }
+// }
