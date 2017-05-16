@@ -36,9 +36,11 @@ Extension bringt kein eigenes CSS mit!!!
       grid-template-columns: 1fr 1fr;
     }
     .item {
+      margin-bottom: $baseline;
       @include min(950px) {
         display: flex;
         flex-flow: column;
+        margin-bottom: 0;
       }
     }
     .opinion {
@@ -63,7 +65,6 @@ Extension bringt kein eigenes CSS mit!!!
         border-top-color: $border-color-bginvers;
       }
     }
-
     .item {
       &:nth-child(odd) .opinion:after {
         border-right: none;
@@ -71,7 +72,6 @@ Extension bringt kein eigenes CSS mit!!!
         left: 0;
         margin-left: 20px;
       }
-
       &:nth-child(even) .opinion:after {
         border-left: none;
         border-top-color: $border-color-bginvers;
