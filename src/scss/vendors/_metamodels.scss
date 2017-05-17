@@ -9,7 +9,7 @@ Extension bringt kein eigenes CSS mit!!!
   .showcase {
     @include medium {
       display: grid;
-      grid-gap: 7.6923%;
+      grid-gap: 2 * $baseline 7.6923%;
       grid-template-columns: 1fr 1fr;
     }
     .item {
