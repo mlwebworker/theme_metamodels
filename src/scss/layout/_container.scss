@@ -294,60 +294,60 @@ ul.chart {
 // =============================================================================
 // =============================================================================
 // showcase start
-#showcase {
-	overflow: visible;
-}
-.showcase .item {
-	display: block;
-	vertical-align: top;
-	width: 47.5%;
-	margin-right: 5%;
-	position: relative;
-	margin-bottom: 65px;
-	float: left;
-	.new {
-		border: 1px solid #262626;
-		border-radius: 0 0 5px 5px;
-		top: 0;
-		right: 30px;
-		text-shadow: 1px 1px 0 #000;
-		color: #fff;
-		position: absolute;
-		font-size: 16px;
-		display: inline-block;
-		padding: 10px 20px;
-		background-color: #262626;
-	}
-	&:nth-child(2n) {
-		margin-right: 0;
-	}
-	&:nth-last-child(-n+2) {
-		margin-bottom: 0;
-	}
-	img {
-		border-radius: 5px;
-		margin-bottom: 10px;
-		border: 1px solid #ccc;
-	}
-	em {
-		color: #6e6e6e;
-	}
-	p {
-		padding-bottom: 0;
-		+ p {
-			padding-top: 0;
-		}
-	}
-	a p {
-		padding-top: 0;
-	}
-	p a {
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
+// #showcase {
+// 	overflow: visible;
+// }
+// .showcase .item {
+// 	display: block;
+// 	vertical-align: top;
+// 	width: 47.5%;
+// 	margin-right: 5%;
+// 	position: relative;
+// 	margin-bottom: 65px;
+// 	float: left;
+// 	.new {
+// 		border: 1px solid #262626;
+// 		border-radius: 0 0 5px 5px;
+// 		top: 0;
+// 		right: 30px;
+// 		text-shadow: 1px 1px 0 #000;
+// 		color: #fff;
+// 		position: absolute;
+// 		font-size: 16px;
+// 		display: inline-block;
+// 		padding: 10px 20px;
+// 		background-color: #262626;
+// 	}
+// 	&:nth-child(2n) {
+// 		margin-right: 0;
+// 	}
+// 	&:nth-last-child(-n+2) {
+// 		margin-bottom: 0;
+// 	}
+// 	img {
+// 		border-radius: 5px;
+// 		margin-bottom: 10px;
+// 		border: 1px solid #ccc;
+// 	}
+// 	em {
+// 		color: #6e6e6e;
+// 	}
+	// p {
+	// 	padding-bottom: 0;
+	// 	+ p {
+	// 		padding-top: 0;
+	// 	}
+	// }
+	// a p {
+	// 	padding-top: 0;
+	// }
+	// p a {
+	// 	text-decoration: none;
+	// 	&:hover {
+	// 		text-decoration: underline;
+	// 	}
+	// }
+// }
 // showcase end
 // =============================================================================
 

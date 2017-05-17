@@ -5,27 +5,58 @@ VENDORS/METAMODELS
 Extension bringt kein eigenes CSS mit!!!
 =========================================================
 */
- // TODO besser aufteilen verallgemeiner
-  // .showcase {
-  //   @include small {
-  //     display: flex;
-  //     flex-flow: wrap;
-  //     justify-content: space-between;
-  //   }
-  //   .item {
+ // TODO verallgemeinern und ggf. zusammenfassen
+  .showcase {
+    @include medium {
+      display: grid;
+      grid-gap: 2 * $baseline;
+      grid-template-columns: 1fr 1fr;
+    }
+    .item {
   //     @include small {
   //       width: 47%;
-  //     }
-  //     p {
-  //       margin: 0;
-  //     }
-  //   }
-  // }
+    	img {
+    		border-radius: 5px;
+    		margin-bottom: 10px;
+    		border: 1px solid $border-color;
+    	}
+    	em {
+    		color: $color-alternative;
+    	}
+      p {
+    		padding-bottom: 0;
+    		+ p {
+    			padding-top: 0;
+    		}
+    	}
+    	a p {
+    		padding-top: 0;
+    	}
+    	p a {
+    		text-decoration: none;
+    		&:hover {
+    			text-decoration: underline;
+    		}
+    	}
+    }
   // .pagination {
   //   @include small {
   //
   //   }
-  // }
+  }
+  // Fallback fuer grid
+  @supports not (display: grid) {
+    .showcase {
+      @include medium {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+      }
+      .item {
+        width: 47.5%;
+      }
+    }
+  }
   // =============================================================================
   // opinion start
   // TODO strong und span ausmerzen im html-code
@@ -100,8 +131,8 @@ Extension bringt kein eigenes CSS mit!!!
 }
 
 // Fallback fuer grid
-.opinions {
-  @supports not (display: grid) {
+@supports not (display: grid) {
+  .opinions {
     @include min(950px) {
       display: flex;
       flex-flow: wrap;

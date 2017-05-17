@@ -581,25 +581,25 @@ TODO einarbeiten und Umstellen auf mobile First
 		font-size: 19px;
 	}
 
-	.showcase .item {
-		width: 100%;
-
-		&:nth-child(n) {
-			margin-right: 0;
-		}
-
-		&:nth-last-child(n) {
-			margin-bottom: 45px;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		p {
-			padding-top: 0;
-		}
-	}
+	// .showcase .item {
+	// 	width: 100%;
+	//
+	// 	&:nth-child(n) {
+	// 		margin-right: 0;
+	// 	}
+	//
+	// 	&:nth-last-child(n) {
+	// 		margin-bottom: 45px;
+	// 	}
+	//
+	// 	&:last-child {
+	// 		margin-bottom: 0;
+	// 	}
+	//
+	// 	p {
+	// 		padding-top: 0;
+	// 	}
+	// }
 
 	div[class*="ce_"].text-image p {
 		padding-top: 0;
