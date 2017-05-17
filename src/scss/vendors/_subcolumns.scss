@@ -24,17 +24,72 @@ div {
 // NOTE im Moment eingeschraenkt auf showcase von der ersten Seite (#showcase-108)
 #showcase-108 {
 	.col-33x66 {
-		display: grid;
-		grid-column-gap: 5%;
-		grid-template-columns: 30% 65%;
+		@include min(1100px) {
+			display: grid;
+			grid-column-gap: 5%;
+			grid-template-columns: 30% 65%;
+		}
 	}
-	.c33l, .c33r, .c66l, .c66r {
+	.c33l, .c33r, .c66l, .c66r { // NOTE muesste hier gar nicht allgemein sein
 		float: none;
 		width: auto;
 		margin: 0;
 	}
 }
-
+//Fallback fuer grid
+@supports not (display: grid) {
+	#showcase-108 {
+		.col-33x66 {
+			@include min(1100px) {
+				display: flex;
+				// flex-flow: wrap;
+			}
+		}
+		.c33l, .c33r, .c66l, .c66r {
+			float: none;
+			width: auto;
+			margin: 0;
+		}
+		.c33l {
+			@include min(1100px) {
+				width: 30%;
+				margin-right: 5%;
+			}
+		}
+		.c66r {
+			@include min(1100px) {
+				width: 65%;
+			}
+		}
+	}
+}
+.ie,
+.edge {
+	#showcase-108 {
+		.col-33x66 {
+			@include min(1100px) {
+				display: flex;
+				flex-flow: wrap;
+			}
+		}
+		.c33l, .c33r, .c66l, .c66r {
+			float: none;
+			width: auto;
+			margin: 0;
+		}
+		.c33l {
+			@include min(1100px) {
+				width: 30%;
+				margin-right: 5%;
+			}
+		}
+		.c66r {
+			@include min(1100px) {
+				width: 65%;
+			}
+		}
+	}
+}
 // .ce_colsetStart,
 // .ce_colsetPart {
 //   padding: 0;

@@ -57,6 +57,19 @@ Extension bringt kein eigenes CSS mit!!!
       }
     }
   }
+  .ie,
+  .edge {
+    .showcase {
+      @include medium {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+      }
+      .item {
+        width: 47.5%;
+      }
+    }
+  }
   // =============================================================================
   // opinion start
   // TODO strong und span ausmerzen im html-code
