@@ -19,20 +19,21 @@ div {
 	}
 }
 
-// IDEA vorbereitet
-// IDEA Das kann man alles noch verbessern oder auf css-grid umstellen, extra Bereich fuer grid auslagern
-// .yaml4 {
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .ym-g33 {
-//   width: 27%;
-// }
-// .ym-g66 {
-//   width: 60%;
-// }
-
-// Online laeuft alles auf Yaml3
+// NOTE noch nicht perfekt, aber wenn den subcolumns verwendet wird, brauchbar
+// TODO Umstellung auf YAML4 erscheint sinnvoll, aber mit subcolumns ohnehin schlecht mobile first umzusetzen
+// NOTE im Moment eingeschraenkt auf showcase von der ersten Seite (#showcase-108)
+#showcase-108 {
+	.col-33x66 {
+		display: grid;
+		grid-column-gap: 5%;
+		grid-template-columns: 30% 65%;
+	}
+	.c33l, .c33r, .c66l, .c66r {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+}
 
 // .ce_colsetStart,
 // .ce_colsetPart {
