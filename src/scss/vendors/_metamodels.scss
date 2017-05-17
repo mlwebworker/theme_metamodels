@@ -5,7 +5,7 @@ VENDORS/METAMODELS
 Extension bringt kein eigenes CSS mit!!!
 =========================================================
 */
-.ce_metamodel_list { // TODO besser aufteilen verallgemeiner
+ // TODO besser aufteilen verallgemeiner
   // .showcase {
   //   @include small {
   //     display: flex;
@@ -29,76 +29,76 @@ Extension bringt kein eigenes CSS mit!!!
   // =============================================================================
   // opinion start
   // TODO strong und span ausmerzen im html-code
-  .opinions {
+.opinions {
+  @include min(950px) {
+    display: grid;
+    grid-gap: 2 * $baseline;
+    grid-template-columns: 1fr 1fr;
+  }
+  .item {
+    margin-bottom: $baseline;
     @include min(950px) {
-      display: grid;
-      grid-gap: 2 * $baseline;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-flow: column;
+      margin-bottom: 0;
     }
-    .item {
-      margin-bottom: $baseline;
-      @include min(950px) {
-        display: flex;
-        flex-flow: column;
-        margin-bottom: 0;
-      }
+  }
+  .opinion {
+    border-radius: 5px;
+    padding: 16px 28px;
+    position: relative;
+    border: 1px solid $border-color-bginvers;
+    color: $color-invers;
+    background-color: $bg-color-invers;
+    @include min(950px) {
+      flex: 1;
     }
-    .opinion {
-      border-radius: 5px;
-      padding: 16px 28px;
-      position: relative;
-      border: 1px solid $border-color-bginvers;
-      color: $color-invers;
-      background-color: $bg-color-invers;
-      @include min(950px) {
-        flex: 1;
-      }
-      &:after {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-color: $border-color-bg;
-        border-top-color: $border-color-bginvers;
-      }
+    &:after {
+      top: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: $border-color-bg;
+      border-top-color: $border-color-bginvers;
     }
-    .item {
-      &:nth-child(odd) .opinion:after {
-        border-right: none;
-        border-width: 35px;
-        left: 0;
-        margin-left: 20px;
-      }
-      &:nth-child(even) .opinion:after {
-        border-left: none;
-        border-top-color: $border-color-bginvers;
-        border-width: 35px;
-        right: 0;
-        margin-right: 20px;
-      }
+  }
+  .item {
+    &:nth-child(odd) .opinion:after {
+      border-right: none;
+      border-width: 35px;
+      left: 0;
+      margin-left: 20px;
     }
-    .meta {
-      padding: 0;
-      margin-left: 70px;
+    &:nth-child(even) .opinion:after {
+      border-left: none;
+      border-top-color: $border-color-bginvers;
+      border-width: 35px;
+      right: 0;
+      margin-right: 20px;
     }
-    .item:nth-child(even) .meta {
-      margin-right: 70px;
-      margin-left: 0;
-      text-align: right;
+  }
+  .meta {
+    padding: 0;
+    margin-left: 70px;
+  }
+  .item:nth-child(even) .meta {
+    margin-right: 70px;
+    margin-left: 0;
+    text-align: right;
+  }
+  .meta {
+    > p:first-child {
+      padding-bottom: 0;
     }
-    .meta {
-      > p:first-child {
-        padding-bottom: 0;
-      }
-      p + p {
-        padding-top: 0;
-      }
+    p + p {
+      padding-top: 0;
     }
   }
 }
+
 // Fallback fuer grid
 .opinions {
   @supports not (display: grid) {
