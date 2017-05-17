@@ -21,8 +21,9 @@ div {
 
 // NOTE noch nicht perfekt, aber wenn den subcolumns verwendet wird, brauchbar
 // TODO Umstellung auf YAML4 erscheint sinnvoll, aber mit subcolumns ohnehin schlecht mobile first umzusetzen
-// NOTE im Moment eingeschraenkt auf showcase von der ersten Seite (#showcase-108)
-#showcase-108 {
+// NOTE im Moment eingeschraenkt auf showcase von der ersten Seite (#showcase-108 und #showcase-99) - Provisorium
+#showcase-108,
+#showcase-99 {
 	.col-33x66 {
 		@include min(1100px) {
 			display: grid;
@@ -38,7 +39,8 @@ div {
 }
 //Fallback fuer grid
 @supports not (display: grid) {
-	#showcase-108 {
+	#showcase-108,
+	#showcase-99 {
 		.col-33x66 {
 			@include min(1100px) {
 				display: flex;
@@ -65,7 +67,8 @@ div {
 }
 .ie,
 .edge {
-	#showcase-108 {
+	#showcase-108,
+	#showcase-99 {
 		.col-33x66 {
 			@include min(1100px) {
 				display: flex;
