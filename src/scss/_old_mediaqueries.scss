@@ -61,141 +61,6 @@ TODO einarbeiten und Umstellen auf mobile First
 	}
 }
 
-@media (min-width: 1024px) {
-	#nav .level_1 > li {
-		font-size: 16px;
-		margin-left: 25px;
-
-		> {
-			a, span {
-				padding: 55px 0 20px;
-			}
-
-			.active:before, .trail:before {
-				height: 5px;
-				content: "";
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				background-color: #009dd1;
-			}
-		}
-
-		&:hover > a:before {
-			height: 5px;
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background-color: #009dd1;
-		}
-	}
-
-	nav li {
-		&.submenu ul {
-			background: #fff;
-			background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+");
-			background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 100%);
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(247, 247, 247, 1)));
-			background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 100%);
-			background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 100%);
-			background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 100%);
-			background: _linear-gradient_legacy(compact(to bottom), rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f7f7f7', GradientType=0);
-			border: 1px solid #e6e6e6;
-			display: none;
-			position: absolute;
-			z-index: 100;
-			margin-left: -30px;
-			-webkit-border-radius: 2px;
-			border-radius: 2px;
-			padding: 10px 30px 18px 25px;
-			min-width: 160px;
-
-			&:before {
-				background-color: #fff;
-				content: "";
-				display: block;
-				height: 15px;
-				left: 45px;
-				position: absolute;
-				top: -8px;
-				-webkit-transform: rotate(45deg);
-				-moz-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				-o-transform: rotate(45deg);
-				transform: rotate(45deg);
-				width: 15px;
-			}
-		}
-
-		&:hover {
-			ul, li {
-				display: block;
-			}
-		}
-
-		&.submenu {
-			ul.hover {
-				display: block;
-			}
-
-			li {
-				float: none;
-				margin: 5px 0;
-				font-size: 14px;
-
-				&.last {
-					margin-bottom: 0;
-				}
-
-				a:hover, span {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
-
-	#nav li.experts {
-		a, .active {
-			padding: 5px 12px;
-			border: 1px solid #009dd1;
-			background: #00aee8;
-			background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYWVlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDlkZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+");
-			background: -moz-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 174, 232, 1)), color-stop(100%, rgba(0, 157, 209, 1)));
-			background: -webkit-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-			background: -o-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-			background: -ms-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-			background: _linear-gradient_legacy(compact(to bottom), rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00aee8', endColorstr='#009dd1', GradientType=0);
-			-webkit-border-radius: 2px;
-			border-radius: 2px;
-			color: #fff;
-			text-shadow: 1px 1px 0 #00698c;
-		}
-
-		a:hover, .active {
-			background: none;
-			background-color: #009dd1;
-		}
-
-		a:before, &:hover a:before {
-			display: none;
-		}
-	}
-}
-
-@media (min-width: 1024px) and (max-width: 1075px) {
-	#nav .level_1 > li {
-		margin-left: 18px;
-	}
-}
-
 @media (max-width: 1023px) {
 	.js-nav {
 		overflow-y: visible;
@@ -212,96 +77,6 @@ TODO einarbeiten und Umstellen auf mobile First
 	.js-nav #wrapper {
 		right: 50%;
 	}
-
-	#nav {
-		background-color: transparent;
-		-webkit-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-		-moz-box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-		box-shadow: inset 1.5em 0 1.5em -0.75em rgba(0, 0, 0, 0.25);
-		float: none;
-		display: none;
-		padding: 60px 30px 50px 20px;
-		position: absolute;
-		color: #fff;
-		margin-top: 0;
-		top: 0;
-		height: 100%;
-		width: 50%;
-		right: -50%;
-	}
-
-	.js-nav {
-		#nav, #nav-close {
-			display: block;
-		}
-	}
-
-	#nav {
-		> ul {
-			float: none;
-			padding: 10px 15px;
-		}
-
-		li {
-			display: block;
-			text-align: left;
-
-			ul {
-				margin-left: 15px;
-				margin-bottom: 5px;
-			}
-
-			a, span {
-				display: inline-block;
-				padding: 2px 10px;
-			}
-
-			a:hover, span {
-				text-decoration: underline;
-			}
-		}
-
-		.level_1 > li {
-			margin: 0;
-		}
-
-		li {
-			a, span {
-				color: #262626;
-			}
-
-			&.experts {
-				a, .active {
-					padding: 7px 12px;
-					margin-top: 10px;
-					border: 1px solid #009dd1;
-					background: #00aee8;
-					background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYWVlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDlkZDEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+");
-					background: -moz-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 174, 232, 1)), color-stop(100%, rgba(0, 157, 209, 1)));
-					background: -webkit-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-					background: -o-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-					background: -ms-linear-gradient(top, rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-					background: _linear-gradient_legacy(compact(to bottom), rgba(0, 174, 232, 1) 0%, rgba(0, 157, 209, 1) 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00aee8', endColorstr='#009dd1', GradientType=0);
-					-webkit-border-radius: 2px;
-					border-radius: 2px;
-					color: #fff;
-					text-shadow: 1px 1px 0 #00698c;
-				}
-
-				a:hover, .active {
-					background: none;
-					text-decoration: none;
-					background-color: #009dd1;
-				}
-			}
-		}
-	}
-
-	nav.mobile {
-		display: block;
-	}
 }
 
 @media (max-width: 1000px) {
@@ -310,13 +85,6 @@ TODO einarbeiten und Umstellen auf mobile First
 			width: 100%;
 			padding: 0;
 			text-align: left;
-		}
-
-		.button {
-			// width: 100%;
-			// padding: 0;
-			// text-align: left;
-			// margin-top: 30px;
 		}
 	}
 
@@ -458,42 +226,6 @@ TODO einarbeiten und Umstellen auf mobile First
 		}
 	}
 
-	// .member .item {
-	// 	width: 30%;
-	// 	margin-right: 5%;
-	//
-	// 	&.team {
-	// 		width: 47.5%;
-	// 		margin-right: 5%;
-	// 	}
-	//
-	// 	&:nth-child(n) {
-	// 		margin-right: 5%;
-	// 	}
-	//
-	// 	&:nth-child(3n) {
-	// 		margin-right: 0;
-	// 	}
-	//
-	// 	&.team {
-	// 		&:nth-child(n) {
-	// 			margin-right: 4%;
-	// 		}
-	//
-	// 		&:nth-child(2n) {
-	// 			margin-right: 0;
-	// 		}
-	// 	}
-	//
-	// 	&:nth-last-child(-n+4), &.team:nth-last-child(-n+3) {
-	// 		margin-bottom: 35px;
-	// 	}
-	//
-	// 	&:nth-last-child(-n+3), &.team:last-child {
-	// 		margin-bottom: 0;
-	// 	}
-	// }
-
 	.ce_metamodel_nightlyinfo td {
 		&.col_0 {
 			width: 50%;
@@ -519,15 +251,6 @@ TODO einarbeiten und Umstellen auf mobile First
 		display: none !important;
 	}
 
-	.opinions .item {
-		// width: 100%;
-		// margin-right: 0;
-		//
-		// &:last-child {
-		// 	margin-bottom: 0;
-		// }
-	}
-
 	.ce_metamodel_nightlyinfo td {
 		&[class*="col_"] {
 			width: 100%;
@@ -546,9 +269,9 @@ TODO einarbeiten und Umstellen auf mobile First
 	}
 
 	footer {
-		height: auto;
-		margin-top: 0;
-		position: relative;
+		// height: auto;
+		// margin-top: 0;
+		// position: relative;
 	}
 }
 
@@ -560,14 +283,6 @@ TODO einarbeiten und Umstellen auf mobile First
 			height: 80px;
 		}
 	}
-
-	#nav {
-	}
-
-	nav.mobile {
-		margin-top: 23px;
-	}
-
 	h2 {
 		font-size: 22px;
 		margin-bottom: 15px;
@@ -580,27 +295,6 @@ TODO einarbeiten und Umstellen auf mobile First
 	h3 {
 		font-size: 19px;
 	}
-
-	// .showcase .item {
-	// 	width: 100%;
-	//
-	// 	&:nth-child(n) {
-	// 		margin-right: 0;
-	// 	}
-	//
-	// 	&:nth-last-child(n) {
-	// 		margin-bottom: 45px;
-	// 	}
-	//
-	// 	&:last-child {
-	// 		margin-bottom: 0;
-	// 	}
-	//
-	// 	p {
-	// 		padding-top: 0;
-	// 	}
-	// }
-
 	div[class*="ce_"].text-image p {
 		padding-top: 0;
 	}
@@ -645,21 +339,16 @@ TODO einarbeiten und Umstellen auf mobile First
 	}
 
 	#social {
-		float: none;
-		margin-top: 20px;
-		display: block;
-		width: 100%;
+		// float: none;
+		// margin-top: 20px;
+		// display: block;
+		// width: 100%;
 	}
 }
 
 @media (max-width: 585px) {
 	.js-nav #wrapper {
 		right: 70%;
-	}
-
-	#nav, #nav-close {
-		width: 70%;
-		right: -70%;
 	}
 
 	.mod_wf_extendedBreadcrumb {
@@ -670,19 +359,6 @@ TODO einarbeiten und Umstellen auf mobile First
 		float: none;
 		margin-top: 10px;
 	}
-
-	// .member .item.contributor {
-	// 	width: 47.5%;
-	// 	margin-right: 5%;
-	//
-	// 	&:nth-child(n) {
-	// 		margin-right: 5%;
-	// 	}
-	//
-	// 	&:nth-child(2n) {
-	// 		margin-right: 0;
-	// 	}
-	// }
 
 	.fundraising .sponsoring {
 		width: 100%;
@@ -711,28 +387,19 @@ TODO einarbeiten und Umstellen auf mobile First
 		}
 	}
 
-	// .member .item.team {
-	// 	width: 100%;
-	// 	margin-right: 0;
-	//
-	// 	&:nth-child(n) {
-	// 		margin-right: 0;
-	// 	}
-	// }
-
 	footer {
-		p, .mod_navigation {
-			width: 100%;
-		}
-
-		p {
-			margin-right: 0;
-			margin-bottom: 15px;
-		}
-
-		.mod_navigation {
-			text-align: left;
-		}
+	// 	p, .mod_navigation {
+	// 		width: 100%;
+	// 	}
+	//
+	// 	p {
+	// 		margin-right: 0;
+	// 		margin-bottom: 15px;
+	// 	}
+	//
+	// 	.mod_navigation {
+	// 		text-align: left;
+	// 	}
 	}
 }
 
@@ -740,19 +407,6 @@ TODO einarbeiten und Umstellen auf mobile First
 	.js-nav #wrapper {
 		right: 90%;
 	}
-
-	#nav, #nav-close {
-		width: 90%;
-		right: -90%;
-	}
-
-	// .member .item.contributor {
-	// 	width: 100%;
-	//
-	// 	&:nth-child(n) {
-	// 		margin-right: 0;
-	// 	}
-	// }
 }
 
 @media (max-width: 350px) {
