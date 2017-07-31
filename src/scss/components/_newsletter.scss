@@ -1,0 +1,17 @@
+/*
+================================================================================
+Stylesheet MM-Website
+COMPONENTS/NEWSLetter
+Template nl_default.html5
+================================================================================
+*/
+.nl_subscribed {
+  color: $color-accent;
+  font-weight: 700;
+}
+
+.nl_unsubscribe {
+  color: $silver;
+  font-style: italic;
+  font-size: $font-size-small;
+}
